@@ -1,0 +1,24 @@
+steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 必須獲取完整歷史才能進行 amend
+
+      - name: Generate metrics
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          output_action: none
+
+      - name: Deploy with amended commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          
+          if [ "$(git log -1 --pretty=%s)" = "Update metrics" ]; then
+            git commit --amend --no-edit
+          else
+            git commit -m "Update metrics"
+          fi
+          
+          git push origin main --force
