@@ -16,4 +16,4 @@ NYCU CS;
 
 
  
- <img src="https://i.imgur.com/PKxmdK9.png" width = "50%" alt="shiba.jpg" align=center />
+![stat](github-metrics.svg)
