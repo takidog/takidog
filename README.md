@@ -8,11 +8,9 @@ NYCU CS;
 
 ⚙️ Daily drivers: .py, .go
 
-🔭 Exploring: RAG, WebRTC, Rust & random side projects
+🔭 Exploring: RAG, WebRTC, System Virtualization & Container Internals
 
 🛠️ Stack: Python(ASGI), Golang, Vue, React, Flutter, K8s
-
-🐛 Philosophy: If I hit an unavoidable bug, I contribute the fix :|
 
 
  
